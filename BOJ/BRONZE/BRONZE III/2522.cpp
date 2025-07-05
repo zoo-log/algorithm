@@ -1,0 +1,40 @@
+#include <iostream>
+
+int main(void)
+{
+    int N;
+    std::cin >> N;
+
+    for (int i = N; i > 0; i--)
+    {
+        if (i != 1)
+        {
+            for (int j = i - 1; j > 0; j--)
+            {
+                std::cout << " ";
+            }
+        }
+
+        for (int j = 0; j < N - i + 1; j++)
+        {
+            std::cout <<"*";
+        }
+        std::cout << "\n";
+    }
+
+    for (int i = 1; i <= N - 1; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            std::cout << " ";
+        }
+
+        for (int j = 0; j < N - i; j++)
+        {
+            std::cout <<"*";
+        }
+        std::cout << "\n";
+    }
+
+    return 0;
+}
